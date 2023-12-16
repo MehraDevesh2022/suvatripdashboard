@@ -234,3 +234,8 @@ export const GET_APPLICATION_LIST = "/application-list";
 
 //JOB APPLICATION
 export const GET_API_KEY = "/api-key";
+
+///SUVA TRIP URL'S
+export const LOGIN = "/auth/login";
+
+///SUVA TRIP URL'S
