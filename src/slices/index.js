@@ -1,14 +1,11 @@
 import { combineReducers } from "redux";
-
 // Front
 import LayoutReducer from "./layouts/reducer";
-
 // Authentication
 import LoginReducer from "./auth/login/reducer";
 import AccountReducer from "./auth/register/reducer";
 import ForgetPasswordReducer from "./auth/forgetpwd/reducer";
 import ProfileReducer from "./auth/profile/reducer";
-
 //Calendar
 import CalendarReducer from "./calendar/reducer";
 //Chat
@@ -69,6 +66,8 @@ import JobReducer from "./jobs/reducer";
 // API Key
 import APIKeyReducer from "./apiKey/reducer";
 
+import InvoiceSuvaSlice from "./invoiceSuvaTriv/invoice/reducer"
+
 const rootReducer = combineReducers({
     Layout: LayoutReducer,
     Login: LoginReducer,
@@ -95,7 +94,8 @@ const rootReducer = combineReducers({
     FileManager: FileManagerReducer,
     Todos: TodosReducer,
     Jobs: JobReducer,
-    APIKey: APIKeyReducer
+    APIKey: APIKeyReducer,
+    SuvaInvoice :  InvoiceSuvaSlice
 });
 
 export default rootReducer;

@@ -7,6 +7,7 @@ export * from "./auth/register/thunk";
 export * from "./auth/forgetpwd/thunk";
 export * from "./auth/profile/thunk";
 
+
 //Calendar
 export * from "./calendar/thunk";
 //Chat
@@ -65,3 +66,6 @@ export * from "./jobs/thunk";
 
 // API Key
 export * from "./apiKey/thunk";
+
+// suvaTrip Invoices
+export * from "./invoiceSuvaTriv/invoice/thunk";

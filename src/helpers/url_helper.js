@@ -88,6 +88,15 @@ export const GET_DEALS = "/deals";
 export const GET_TRANSACTION_LIST = "/transaction-list";
 export const GET_ORDRER_LIST = "/order-list";
 
+
+// suvaTrip Invoice
+ export const GET_ALL_INVOICES = "/invoice/invoices"
+ export const CREATE_NEW_INVOICE = "/invoice/invoice"
+ export const UPDATE_INVOICE_ = "/invoice/invoices/:id"
+ export const  DELETE_INVOICE_ = "/invoice/invoices/:id"
+
+
+
 // Invoice
 export const GET_INVOICES = "/apps/invoice";
 export const ADD_NEW_INVOICE = "/apps/invoice";

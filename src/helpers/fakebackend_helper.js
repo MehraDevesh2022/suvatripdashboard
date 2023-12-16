@@ -210,6 +210,15 @@ export const getTransationList = () => api.get(url.GET_TRANSACTION_LIST);
 // Order List
 export const getOrderList = () => api.get(url.GET_ORDRER_LIST);
 
+//suvaTrip Invoice
+export const getInvoice = () => api.get(url.GET_ALL_INVOICES)
+export const addInvoice = invoice => api.create(url.CREATE_NEW_INVOICE, invoice)
+export const updateInvoiceSuvaTrip = invoice => api.update(url.UPDATE_INVOICE_ + '/' + invoice._id, invoice)
+export const deleteInvoiceSuvaTrip = invoice => api.delete(url.DELETE_INVOICE_ + '/' + invoice)
+
+
+
+
 // Invoice
 //get Invoice
 export const getInvoices = () => api.get(url.GET_INVOICES);

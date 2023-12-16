@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardBody, Col, Table, Button, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import { getSuvaInvoices } from "../../../slices/thunks"
+import { useSelector, useDispatch } from "react-redux";
+import { createSelector } from "reselect";
 export default function Invoice() {
+  const dispatch = useDispatch();
+
+  const selectLayoutState = (state) => state.Calendar;
+  
+  const SuvaInvoiceData = createSelector(
+    selectLayoutState ,
+    (state) =>({
+      invoices : state.invoices,
+      error  : state.error
+    })
+
+
+  )
+  const {invoices , error } = useSelector(SuvaInvoiceData);
+
+
+  useEffect(() => {
+    dispatch(getSuvaInvoices());
+  } , [dispatch]);
+    
+
   return (
     <>
       <Row>
@@ -102,7 +125,6 @@ export default function Invoice() {
                         <strong>US $1.7</strong>
                       </td>
                     </tr>
-                  
                   </tbody>
                   <tbody>
                     <tr>
@@ -133,7 +155,6 @@ export default function Invoice() {
                         <strong>US $1.7</strong>
                       </td>
                     </tr>
-                   
                   </tbody>
                 </Table>
               </div>
